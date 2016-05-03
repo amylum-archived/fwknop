@@ -40,7 +40,7 @@ build: submodule deps
 	rm -rf $(BUILD_DIR)
 	cp -R upstream $(BUILD_DIR)
 	cd $(BUILD_DIR) && autoreconf -fiv
-	cd $(BUILD_DIR) && ./configure $(PATH_FLAGS) $(LIBPCAP_PATH)
+	cd $(BUILD_DIR) && CFLAGS='$(LIBPCAP_PATH)' ./configure $(PATH_FLAGS)
 	cd $(BUILD_DIR) && make
 	cd $(BUILD_DIR) && make DESTDIR=$(RELEASE_DIR) install
 	mkdir -p $(RELEASE_DIR)/usr/share/licenses/$(PACKAGE)
