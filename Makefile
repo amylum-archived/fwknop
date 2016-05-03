@@ -11,7 +11,13 @@ VERSION = $(PACKAGE_VERSION)-$(PATCH_VERSION)
 
 PATH_FLAGS = --prefix=/usr --sysconfdir=/etc --localstatedir=/var --sbindir=/usr/bin
 
-.PHONY : default submodule manual container build version push local
+LIBPCAP_VERSION = 1.7.4-1
+LIBPCAP_URL = https://github.com/amylum/libpcap/releases/download/$(LIBPCAP_VERSION)/libpcap.tar.gz
+LIBPCAP_TAR = /tmp/libpcap.tar.gz
+LIBPCAP_DIR = /tmp/libpcap
+LIBPCAP_PATH = -I$(LIBPCAP_DIR)/usr/include -L$(LIBPCAP_DIR)/usr/lib
+
+.PHONY : default submodule deps manual container build version push local
 
 default: submodule container
 
@@ -24,11 +30,17 @@ manual: submodule
 container:
 	./meta/launch
 
-build: submodule
+deps:
+	rm -rf $(LIBPCAP_DIR) $(LIBPCAP_TAR)
+	mkdir $(LIBPCAP_DIR)
+	curl -sLo $(LIBPCAP_TAR) $(LIBPCAP_URL)
+	tar -x -C $(LIBPCAP_DIR) -f $(LIBPCAP_TAR)
+
+build: submodule deps
 	rm -rf $(BUILD_DIR)
 	cp -R upstream $(BUILD_DIR)
 	cd $(BUILD_DIR) && autoreconf -fiv
-	cd $(BUILD_DIR) && ./configure $(PATH_FLAGS)
+	cd $(BUILD_DIR) && ./configure $(PATH_FLAGS) $(LIBPCAP_PATH)
 	cd $(BUILD_DIR) && make
 	cd $(BUILD_DIR) && make DESTDIR=$(RELEASE_DIR) install
 	mkdir -p $(RELEASE_DIR)/usr/share/licenses/$(PACKAGE)
