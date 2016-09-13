@@ -1,0 +1,35 @@
+name 'fwknop'
+org 'amylum'
+
+licenses 'COPYING'
+
+deps(
+  libpcap: '1.7.4-3',
+  gpgme: '1.6.0-7',
+  'libgpg-error': '1.24-6',
+  libassuan: '2.4.3-7'
+)
+
+configure_flags(
+  prefix: '/usr',
+  sbindir: '/usr/bin',
+  sysconfdir: '/etc/ssh',
+  localstatedir: '/var',
+)
+remove_linker_archives
+
+cflags
+harden
+
+patch 'ssl_dir.patch'
+
+build do
+  run 'autoreconf -fiv'
+  configure
+  make
+  install
+end
+
+test do
+  run 'fwknop -V'
+end
