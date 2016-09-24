@@ -5,7 +5,7 @@ licenses 'COPYING'
 
 deps(
   libpcap: '1.7.4-3',
-  gpgme: '1.6.0-7',
+  gpgme: '1.7.0-8',
   'libgpg-error': '1.24-6',
   libassuan: '2.4.3-7'
 )
