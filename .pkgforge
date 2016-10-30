@@ -4,10 +4,10 @@ org 'amylum'
 licenses 'COPYING'
 
 deps(
-  libpcap: '1.7.4-3',
-  gpgme: '1.7.0-8',
+  libpcap: '1.7.4-4',
+  gpgme: '1.7.1-1',
   'libgpg-error': '1.24-7',
-  libassuan: '2.4.3-8'
+  libassuan: '2.4.3-9'
 )
 
 configure_flags(
