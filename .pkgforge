@@ -4,7 +4,7 @@ org 'amylum'
 licenses 'COPYING'
 
 deps(
-  libpcap: '1.8.1-2',
+  libpcap: '1.8.1-3',
   gpgme: '1.7.1-2',
   'libgpg-error': '1.24-7',
   libassuan: '2.4.3-9'
