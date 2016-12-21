@@ -5,9 +5,9 @@ licenses 'COPYING'
 
 deps(
   libpcap: '1.8.1-5',
-  gpgme: '1.8.0-1',
-  'libgpg-error': '1.25-1',
-  libassuan: '2.4.3-10'
+  gpgme: '1.8.0-2',
+  'libgpg-error': '1.26-1',
+  libassuan: '2.4.3-11'
 )
 
 configure_flags(
