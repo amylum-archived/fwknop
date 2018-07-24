@@ -5,8 +5,8 @@ licenses 'COPYING'
 
 deps(
   libpcap: {
-    version: '1.8.1-18',
-    checksum: 'bb3a2fcc62bdb42082c4060ae6269e60b2aab822239bd31b4995055fa443cda5'
+    version: '1.9.0-1',
+    checksum: '9e8a6e689e140a181361cd3efbf46065a532109f49137a2db35df42f189206f4'
   },
   gpgme: {
     version: '1.11.1-3',
