@@ -1,7 +1,7 @@
 fwknop
 ==========
 
-[![Build Status](https://img.shields.io/circleci/project/amylum/fwknop/master.svg)](https://circleci.com/gh/amylum/fwknop)
+[![Build Status](https://img.shields.io/travis/com/amylum/fwknop.svg)](https://travis-ci.com/amylum/fwknop)
 [![GitHub release](https://img.shields.io/github/release/amylum/fwknop.svg)](https://github.com/amylum/fwknop/releases)
 [![GPL2 Licensed](http://img.shields.io/badge/license-GPL2-green.svg)](https://tldrlegal.com/license/gnu-general-public-license-v2)
 
