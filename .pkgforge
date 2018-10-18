@@ -9,8 +9,8 @@ deps(
     checksum: '5a605b976266cf1db8907675879834c92d55be719dfd0374bef67120ce64b751'
   },
   gpgme: {
-    version: '1.11.1-3',
-    checksum: '8ad569be015944b8b7b465155b2ae0adff56325925b5eb3c2d278d06c7ffb1d5'
+    version: '1.12.0-1',
+    checksum: '8ed66eed2cbf4834f6e32edcc38e70a0b785902fdba6aecd8068ea0778da2894'
   },
   'libgpg-error': {
     version: '1.31-1',
