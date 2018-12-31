@@ -5,20 +5,20 @@ licenses 'COPYING'
 
 deps(
   libpcap: {
-    version: '1.9.0-3',
-    checksum: '9eded7b339b39300ad1b35f61756c1b05306ac7403f0e66c9dbe170fc37c92fb'
+    version: '1.9.0-4',
+    checksum: '1ee2c6dfbf1c65d48011b9e9771ebb9adb0e62de8d2c29fd24feae616c44ead1'
   },
   gpgme: {
-    version: '1.12.0-1',
-    checksum: '8ed66eed2cbf4834f6e32edcc38e70a0b785902fdba6aecd8068ea0778da2894'
+    version: '1.12.0-3',
+    checksum: '79d1acb0643c949c5c152d3e3a587552bdb7dc003fe6b80b663b7d0ba6dfd7da'
   },
   'libgpg-error': {
-    version: '1.31-1',
-    checksum: '8f405a9f6936a5e17e992bd69211a0e22cfa52a18abcc8eb217ea86a1871085a'
+    version: '1.33-1',
+    checksum: '5ea72a6eb04e3048885ae43fe2bbc1090c66946e861b10a5a868787172997721'
   },
   libassuan: {
-    version: '2.5.1-5',
-    checksum: '644c7fc29d2b92e0226a156ab37561b50f0cae23675ba0b64728c23daf8c528e'
+    version: '2.5.2-2',
+    checksum: '3f6361f4404e110eb416a5274e00c2c97107370e348e0c1490bb9e56cfe19d9d'
   }
 )
 
